@@ -3,6 +3,7 @@
 安装完成后，设定档torrc会出现在/usr/local/etc/tor这目录下。
 
 接着就找写着「############### This section is just for location-hidden services ###」的区段来新增一些内容：
+
 『
 
 1|############### This section is just for location-hidden services ###
