@@ -5,7 +5,9 @@ Tor这玩意已经是老东西了，有些人只是把它当成跳板用，有�
 
 ![Image text](https://raw.githubusercontent.com/WoamHuman/img-folder/main/IMG_20210530_013338.jpg)
 
-![Image text]()
+![Image text](https://raw.githubusercontent.com/WoamHuman/img-folder/main/IMG_20210530_013054.jpg)
+
+![Image text](https://raw.githubusercontent.com/WoamHuman/img-folder/main/Screenshot_2021-05-30-01-13-32.png)
 
 这些图片和传说虽然有些是真的，但大部分都可以把它当成joke看待，不用对它们太认真。
 
