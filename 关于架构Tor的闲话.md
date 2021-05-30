@@ -3,7 +3,9 @@ Tor这玩意已经是老东西了，有些人只是把它当成跳板用，有�
 长年来人们对deep web都会有一些不切实际的传说，譬如下面这几张图：
 
 
-![image]（https://raw.githubusercontent.com/WoamHuman/-hao/main/IMG_20210530_013054.jpg?token=ASTYAGIFKGNMO24TLRMJZ53AWMRLW）
+![Image text](https://raw.githubusercontent.com/WoamHuman/img-folder/main/IMG_20210530_013338.jpg)
+
+![Image text]()
 
 这些图片和传说虽然有些是真的，但大部分都可以把它当成joke看待，不用对它们太认真。
 
