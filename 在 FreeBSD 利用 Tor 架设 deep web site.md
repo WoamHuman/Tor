@@ -2,39 +2,39 @@
 
 安装完成后，设定档torrc会出现在/usr/local/etc/tor这目录下。
 
-接着就找写着「############### This section is just for location-hidden services ###」的区段来新增一些内容：
+接着就找写着「############### This section is just for location-hidden services ###」的区段来新增一些内容:
 
-『
+```ruby
 
-1|############### This section is just for location-hidden services ###
+1.############### This section is just for location-hidden services ###
 
-2|
+2.
 
-3|## Once you have configured a hidden service, you can look at the 
+3.## Once you have configured a hidden service, you can look at the 
 
-4|## contents of the file ".../hidden_service/hostname" for the address
+4.## contents of the file ".../hidden_service/hostname" for the address
 
-5|## to tell people.
+5.## to tell people.
 
-6|##
+6.##
 
-7|## HiddenServicePort x y:z says to redirect requests on port x to the
+7.## HiddenServicePort x y:z says to redirect requests on port x to the
 
-8|## address y:z.  
+8.## address y:z.  
 
-9|
+9.
 
-10|HiddenServiceDir /usr/local/etc/tor/sites/mysite1
+10.HiddenServiceDir /usr/local/etc/tor/sites/mysite1
 
-11|HiddenServicePort 80 127.0.0.1:10000
+11.HiddenServicePort 80 127.0.0.1:10000
 
-12|
+12.
 
-13|HiddenServiceDir /usr/local/etc/tor/sites/mysite2
+13.HiddenServiceDir /usr/local/etc/tor/sites/mysite2
 
-14|HiddenServicePort 80 127.0.0.1:10001
-                                                                     
-』
+14.HiddenServicePort 80 127.0.0.1:10001
+
+```                             
 
 在这段之前的设定只要照常识设定就行了，想挡什么的话就在设定档挡，设定档不方便挡的用防火墙挡。
 
@@ -50,13 +50,13 @@ HiddenServicePort 80 127.0.0.1:10000的意思，就是将从Tor network上流进
 
 如果想让wordpress的blog可以同时支持多网域，在wp-config.php设定$table_prefix之后放进这两行就行了：
 
-『
+```ruby
 
-1|define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+1.define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 
-2|define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
+2.define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 
-』
+```
 
 当然网站上的图片网址和超链接也必须使用/开头，而不是整串从http://开始，否则别人开下去就是从clearnet上开了，这样他还必须经过exit nodes出来才开得到。
 
@@ -72,12 +72,12 @@ HiddenServicePort 80 127.0.0.1:10000的意思，就是将从Tor network上流进
 
 目前我这台装的security/tor-devel版本是有一些bug，架出来的deep web逛一逛可能就喷这信息然后停掉了：
 
-「
+```
 
 Nov 15 01:40:20.000 [err] void tor_assertion_failed_(const char *, unsigned int, const char *, const char *)(): Bug: src/or/connection.c:3541: connection_handle_event_cb: Assertion connection_state_is_connecting(conn) failed; aborting.
 Nov 15 01:40:20.000 [err] Bug: Assertion connection_state_is_connecting(conn) failed in connection_handle_event_cb at src/or/connection.c:3541. (Stack trace not available)
 
-」
+```
 
 
 根据他们的Trac上的说明，在make config的时候关掉BUFFEREVENTS这个选项就行了：https://trac.torproject.org/projects/tor/ticket/4697
